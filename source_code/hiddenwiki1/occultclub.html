@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Click Game</title>
+  <style>
+    body {
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .star-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+    }
+
+    .star {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 100px solid transparent;
+      border-right: 100px solid transparent;
+      border-bottom: 200px solid white;
+      top: 0;
+      left: 0;
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+
+    .click-point {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: transparent;
+      cursor: pointer;
+    }
+
+    .top {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .right {
+      top: 35%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+
+    .bottom-right {
+      bottom: 9%;
+      right: 21%;
+    }
+
+    .bottom-left {
+      bottom: 9%;
+      left: 21%;
+    }
+
+    .left {
+      top: 35%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    #message {
+      position: absolute;
+      top: 220px;
+      width: 100%;
+      text-align: center;
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+<div class="star-container">
+  <div class="star"></div>
+  <div class="click-point top" data-order="1"></div>
+  <div class="click-point right" data-order="2"></div>
+  <div class="click-point bottom-right" data-order="3"></div>
+  <div class="click-point bottom-left" data-order="4"></div>
+  <div class="click-point left" data-order="5"></div>
+  <div id="message">Hello world.</div>
+</div>
+
+<script>
+  const order = [1, 2, 3, 4, 5];
+  let currentOrder = 0;
+
+  document.querySelectorAll('.click-point').forEach(point => {
+    point.addEventListener('click', () => {
+      if (parseInt(point.getAttribute('data-order')) === order[currentOrder]) {
+        currentOrder++;
+        if (currentOrder === order.length) {
+          document.getElementById('message').style.visibility = 'visible';
+        }
+      } else {
+        currentOrder = 0;  // reset if wrong order
+        document.getElementById('message').style.visibility = 'hidden';
+      }
+    });
+  });
+</script>
+</body>
+</html>
