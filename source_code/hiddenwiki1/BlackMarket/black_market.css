@@ -1,0 +1,247 @@
+/* styles.css */
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-bottom: 1px solid #333;
+}
+
+h1 {
+    margin: 0;
+    color: #ff5722;
+}
+
+p {
+    margin: 10px 0;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.lot {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+}
+
+.lot img {
+    max-width: 100%;
+    border-bottom: 1px solid #333;
+    margin-bottom: 10px;
+}
+
+.lot-title {
+    font-size: 1.2em;
+    color: #ff5722;
+}
+
+.details-btn {
+    background-color: #ff5722;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.details-btn:hover {
+    background-color: #ff784e;
+}
+
+.lot-details {
+    text-align: left;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1c1c1c;
+    border-top: 1px solid #333;
+    font-size: 0.8em;
+    color: #aaa;
+}
+
+/* styles.css */
+
+/* Общие стили остаются как в предыдущей версии */
+
+/* Кнопка регистрации */
+.register-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ff5722;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.register-btn:hover {
+    background-color: #ff784e;
+}
+
+/* Модальное окно */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 15px #000;
+}
+
+.modal-content h2 {
+    color: #ff5722;
+    margin-bottom: 20px;
+}
+
+.modal-content label {
+    display: block;
+    color: #e0e0e0;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+.modal-content input:focus {
+    outline: none;
+    border-color: #ff5722;
+}
+
+.submit-btn {
+    background-color: #ff5722;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.submit-btn:hover {
+    background-color: #ff784e;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5em;
+    color: #e0e0e0;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #ff5722;
+}
+
+/* styles.css */
+
+/* Секция покупки */
+.purchase-section {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 400px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px #000;
+}
+
+.purchase-section h2 {
+    color: #ff5722;
+    margin-bottom: 15px;
+}
+
+.purchase-section label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #e0e0e0;
+}
+
+.purchase-section input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    border-radius: 3px;
+    background-color: #1c1c1c;
+    color: white;
+}
+
+.purchase-section input:focus {
+    outline: none;
+    border-color: #ff5722;
+}
+
+.purchase-section .submit-btn {
+    background-color: #ff5722;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.purchase-section .submit-btn:hover {
+    background-color: #ff784e;
+}
+
+#purchaseResult {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #00e676;
+}

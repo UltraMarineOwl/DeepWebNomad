@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DarkNet Black Market</title>
+    <link rel="stylesheet" href="black_market.css">
+</head>
+<body>
+<header>
+    <h1>Finders Keepers</h1>
+    <p>Welcome to our site. First one in, first one out.</p>
+    <button class="register-btn" onclick="openModal()">Registration</button>
+</header>
+
+<main>
+    <section class="lot" id="lot1">
+        <img src="Images_market/grass.png" alt="Item 1" class="lot-image">
+        <h2 class="lot-title">Green Maria-Joana</h2>
+        <p><strong>ID:</strong> LOT001</p>
+        <button class="details-btn" onclick="toggleDetails('details1')">Details</button>
+        <div class="lot-details hidden" id="details1">
+            <p>The current packet contains up to 10 grams.</p>
+            <p>Price: 0,0045 BTC</p>
+        </div>
+    </section>
+
+    <section class="lot" id="lot2">
+        <img src="Images_market/nokia.png" alt="Item 2" class="lot-image">
+        <h2 class="lot-title">Old Nokia 3310</h2>
+        <p><strong>ID:</strong> LOT034</p>
+        <button class="details-btn" onclick="toggleDetails('details2')">Details</button>
+        <div class="lot-details hidden" id="details2">
+            <p>An old Nokia 3310, the firmware has been modified for needs. It still works.</p>
+            <p>Price: 0,00053 BTC</p>
+        </div>
+    </section>
+
+    <section class="lot" id="lot3">
+        <img src="Images_market/firmware.png" alt="Item 3" class="lot-image">
+        <h2 class="lot-title">Microsoft Windows 7 Ultimate 32/64 Bit</h2>
+        <p><strong>ID:</strong> LOT271</p>
+        <button class="details-btn" onclick="toggleDetails('details3')">Details</button>
+        <div class="lot-details hidden" id="details3">
+            <p>Unreleased firmware of Windows 7 with modifications for increased data protection.</p>
+            <p>Price: 0,0021 BTC</p>
+        </div>
+    </section>
+
+    <section class="lot" id="lot4">
+        <img src="Images_market/knife.png" alt="Item 4" class="lot-image">
+        <h2 class="lot-title">Hunting knife</h2>
+        <p><strong>ID:</strong> LOT567</p>
+        <button class="details-btn" onclick="toggleDetails('details4')">Details</button>
+        <div class="lot-details hidden" id="details4">
+            <p>An old hunting knife, used for cutting up “animals” by my grandfather.</p>
+            <p>Price: 0,0018 BTC</p>
+        </div>
+    </section>
+
+    <section class="lot" id="lot5">
+        <img src="Images_market/dolls.png" alt="Item 5" class="lot-image">
+        <h2 class="lot-title">Antique dolls</h2>
+        <p><strong>ID:</strong> LOT895</p>
+        <button class="details-btn" onclick="toggleDetails('details5')">Details</button>
+        <div class="lot-details hidden" id="details5">
+            <p>Various dolls, of various ages.</p>
+            <p>Price: 0,00067 BTC</p>
+        </div>
+    </section>
+
+    <section class="lot" id="lot6">
+        <img src="Images_market/bike.png" alt="Item 6" class="lot-image">
+        <h2 class="lot-title">Electric Scooter</h2>
+        <p><strong>ID:</strong> LOT902</p>
+        <button class="details-btn" onclick="toggleDetails('details6')">Details</button>
+        <div class="lot-details hidden" id="details6">
+            <p>Selling urgently, but so everything works. Needs a little cleaning.</p>
+            <p>Price: 0,0036 BTC</p>
+        </div>
+    </section>
+
+    <section class="lot" id="lot7">
+        <img src="Images_market/iphone.png" alt="Item 7" class="lot-image">
+        <h2 class="lot-title">Iphone 7</h2>
+        <p><strong>ID:</strong> LOT916</p>
+        <button class="details-btn" onclick="toggleDetails('details7')">Details</button>
+        <div class="lot-details hidden" id="details7">
+            <p>Relatively new. Access to Cloud is limited.</p>
+            <p>Price: 0,0079 BTC</p>
+        </div>
+    </section>
+
+    <section class="lot" id="lot8">
+        <img src="Images_market/bytes.png" alt="Item 8" class="lot-image">
+        <h2 class="lot-title">MalwareBytes AntiMalware</h2>
+        <p><strong>ID:</strong> LOT745</p>
+        <button class="details-btn" onclick="toggleDetails('details8')">Details</button>
+        <div class="lot-details hidden" id="details8">
+            <p>MalwareBytes Licensed Disk. It came with the laptop.</p>
+            <p>Price: 0,00095 BTC</p>
+        </div>
+    </section>
+
+    <section class="lot" id="lot9">
+        <img src="Images_market/conter.png" alt="Item 9" class="lot-image">
+        <h2 class="lot-title">Counterfeit Indian passports</h2>
+        <p><strong>ID:</strong> LOT490</p>
+        <button class="details-btn" onclick="toggleDetails('details9')">Details</button>
+        <div class="lot-details hidden" id="details9">
+            <p>Counterfeit passports for Indian citizenship.</p>
+            <p>Price: 0,0026 BTC</p>
+        </div>
+    </section>
+</main>
+
+<section class="purchase-section">
+    <h2>Purchase</h2>
+    <form id="purchaseForm">
+        <label for="lotId">Lot ID</label>
+        <input type="text" id="lotId" name="lotId" placeholder="Enter Lot ID" required>
+        <label for="email">Mail</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <button type="submit" class="submit-btn">Buy</button>
+    </form>
+    <p id="purchaseResult"></p>
+</section>
+
+<footer>
+    <p>We are not responsible for the goods purchased.</p>
+    <p>1KJ4dF9vNq9j4HJ8kLnXqvP8L5Hr7yYK8B</p>
+</footer>
+
+<!-- Modal Registration Form -->
+<div class="modal hidden" id="registrationModal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2>Registration</h2>
+        <form id="registrationForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <label for="email">Mail</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit" class="submit-btn">Sing Up</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiet Forum</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Quiet Forum</h1>
+  <p>A place where words disappear into silence...</p>
+  <a href="register.html" class="register-link">Register</a>
+</header>
+
+<main>
+  <section class="forum">
+    <h2>Messages</h2>
+    <div id="posts">
+      <!-- Pre-existing messages -->
+      <div class="post">
+        <p class="post-text">"Sometimes silence is louder than words."</p>
+        <p class="post-author">- Anonymous</p>
+      </div>
+      <div class="post">
+        <p class="post-text">"Sometimes silence is louder than words."</p>
+        <p class="post-author">- Anonymous</p>
+      </div>
+      <div class="post">
+        <p class="post-text">"The internet feels too loud today."</p>
+        <p class="post-author">- Unknown</p>
+      </div>
+      <div class="post">
+        <p class="post-text">"Is anyone else out there feeling the same emptiness?"</p>
+        <p class="post-author">- A Wanderer</p>
+      </div>
+      <div class="post">
+        <p class="post-text">"This forum feels like a hidden gem."</p>
+        <p class="post-author">- Curious Soul</p>
+      </div>
+      <div class="post">
+        <p class="post-text">"Sometimes, I type here just to feel connected."</p>
+        <p class="post-author">- Anonymous</p>
+      </div>
+      <div class="post">
+        <p class="post-text">"What if we are all just echoes of each other?"</p>
+        <p class="post-author">- Reflective Mind</p>
+      </div>
+      <div class="post">
+        <p class="post-text">"This space feels safe. Thank you, whoever created it."</p>
+        <p class="post-author">- Grateful Visitor</p>
+      </div>
+      <div class="post">
+        <p class="post-text">"I come here when I need peace."</p>
+        <p class="post-author">- Anonymous</p>
+      </div>
+      <div class="post">
+        <p class="post-text">"The world outside feels chaotic, but here it's quiet."</p>
+        <p class="post-author">- Anonymous</p>
+      </div>
+      <div class="post">
+        <p class="post-text">"I wish there were more places like this."</p>
+        <p class="post-author">- Dreamer</p>
+      </div>
+      <div class="post">
+        <p class="post-text">"Is it possible to find silence in a digital world?"</p>
+        <p class="post-author">- Contemplator</p>
+      </div>
+      <div class="post">
+        <p class="post-text">"Even in the quietest places, I can hear my thoughts racing."</p>
+        <p class="post-author">- Overthinker</p>
+      </div>
+      <div class="post">
+        <p class="post-text">"Silence isn't empty; it's full of answers."</p>
+        <p class="post-author">- Reflective</p>
+      </div>
+      <div class="post">
+        <p class="post-text">"I come here when I feel overwhelmed."</p>
+        <p class="post-author">- Anonymous</p>
+      </div>
+      <div class="post">
+        <p class="post-text">"If you're reading this, I hope you find what you're looking for."</p>
+        <p class="post-author">- Kind Stranger</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="new-post">
+    <h2>Add a Message</h2>
+    <form id="newPostForm">
+      <label for="postText">Message</label>
+      <textarea id="postText" name="postText" placeholder="What's on your mind?" required></textarea>
+      <label for="postAuthor">Your Name (optional)</label>
+      <input type="text" id="postAuthor" name="postAuthor" placeholder="Anonymous">
+      <button type="submit" class="submit-btn">Post</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>Quiet Forum © 2024. Treasure the silence.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

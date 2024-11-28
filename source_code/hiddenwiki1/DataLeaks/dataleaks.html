@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Leaks</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Known Evidence</h1>
+  <p>A curated archive of leaked information. Use at your own risk.</p>
+</header>
+
+<div class="container">
+  <!-- Sidebar Menu -->
+  <nav class="sidebar">
+    <ul>
+      <li><a href="#corporate">Corporate Email Breach</a></li>
+      <li><a href="#social">Social Media User Dump</a></li>
+      <li><a href="#government">Government Employee Records</a></li>
+      <li><a href="#financial">Financial Records</a></li>
+      <li><a href="#medical">Medical Data Breach</a></li>
+      <li><a href="#search">Search Leaked Data</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section id="corporate" class="leaks">
+      <h2>Corporate Email Breach</h2>
+      <div class="leak" id="leak1">
+        <h3>Corporate Email Breach</h3>
+        <p>Description: A dump of corporate email addresses and passwords from 2023.</p>
+        <button onclick="showLeakDetails('leak1')">View Details</button>
+        <div class="leak-details hidden">
+          <p><strong>Leaked Data:</strong></p>
+          <ul>
+            <li>john.doe@example.com : password123</li>
+            <li>jane.doe@company.com : qwerty</li>
+            <li>admin@corporate.com : 123456</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="social" class="leaks">
+      <h2>Social Media User Dump</h2>
+      <div class="leak" id="leak2">
+        <h3>Social Media User Dump</h3>
+        <p>Description: Usernames, emails, and hashed passwords from a popular social media platform.</p>
+        <button onclick="showLeakDetails('leak2')">View Details</button>
+        <div class="leak-details hidden">
+          <p><strong>Leaked Data:</strong></p>
+          <ul>
+            <li>cooluser123 : cooluser@example.com : $2a$10$abcdefg...</li>
+            <li>happygal42 : happygal@social.com : $2a$10$hijklmn...</li>
+            <li>techguru : guru@tech.com : $2a$10$opqrstu...</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="government" class="leaks">
+      <h2>Government Employee Records</h2>
+      <div class="leak" id="leak3">
+        <h3>Government Employee Records</h3>
+        <p>Description: Leaked records of government employees, including names and positions.</p>
+        <button onclick="showLeakDetails('leak3')">View Details</button>
+        <div class="leak-details hidden">
+          <p><strong>Leaked Data:</strong></p>
+          <ul>
+            <li>John Smith - Department of Finance</li>
+            <li>Jane Brown - Department of Health</li>
+            <li>Mike Johnson - Department of Education</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="financial" class="leaks">
+      <h2>Financial Records</h2>
+      <p>Description: Details of financial transactions and bank account information.</p>
+    </section>
+
+    <section id="medical" class="leaks">
+      <h2>Medical Data Breach</h2>
+      <p>Description: Leaked health records from hospitals and clinics.</p>
+    </section>
+
+    <section id="search" class="search-section">
+      <h2>Search Leaked Data</h2>
+      <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Search for an email, name, or keyword" required>
+        <button type="submit" class="submit-btn">Search</button>
+      </form>
+      <p id="searchResult"></p>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <p>Data Leaks © 2024. For educational purposes only.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
